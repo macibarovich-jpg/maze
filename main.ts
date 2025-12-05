@@ -1,7 +1,7 @@
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
     tiles.placeOnTile(null, tiles.getTileLocation(0, 0))
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles29, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level2`)
     Lvl_2 = true
 })
@@ -113,7 +113,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
 scene.cameraFollowSprite(mySprite)
 info.startCountdown(50)
-tiles.placeOnRandomTile(mySprite, sprites.dungeon.collectibleInsignia)
+tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
 game.onUpdate(function () {
 	
 })
